@@ -2,12 +2,11 @@
   "name": "noderest",
   "version": "1.0.0",
   "description": "",
-  "main": "CrudBookNoDB.js",
+  "main": "CRUDBookNoDB.js",
   "scripts": {
-    "start": "node src/CrudBookNoDB.js",
+    "start": "node src/CRUDBookNoDB.js",
     "format": "prettier --write *.js",
-    "dev":"nodemon src/CrudBookNoDB.js"
-
+    "dev": "nodemon src/CRUDBookNoDB.js"
   },
   "repository": {
     "type": "git",
