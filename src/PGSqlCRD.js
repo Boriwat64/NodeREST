@@ -5,11 +5,10 @@ const app = express();
 
 app.use(express.json());
 
-const sequelize = new Sequelize('database','username','password',{
-    host: 'localhost',
-    dialect: 'sqlite',
-    storage: './Database/SQBooks.sqlite'
-});
+const dbUrl = 'postgres://webadmin:TAFstd14676@node42149-boriwat.proen.app.ruk-com.cloud:11519/Books'
+
+const sequelize = new Sequelize(dbUrl);
+
 
 const Book = sequelize.define('book',{
     id: {
@@ -91,3 +90,4 @@ app.delete('/books/:id', (req, res) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
+
